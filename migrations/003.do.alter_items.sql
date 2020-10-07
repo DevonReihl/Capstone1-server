@@ -1,0 +1,4 @@
+ALTER TABLE hunt_items
+ADD COLUMN
+memberId INTEGER REFERENCES team_members(id)
+ON DELETE CASCADE NULL;
