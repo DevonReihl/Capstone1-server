@@ -4,7 +4,7 @@ const morgan = require('morgan')
 const cors = require('cors')
 const helmet = require('helmet')
 const { NODE_ENV } = require('./config')
-// const itemsRouter = require('./list/items-router')
+const itemsRouter = require('./list/items-router')
 const membersRouter = require('./members/members-router')
 
 const app = express();
@@ -17,7 +17,7 @@ app.use(morgan(morganOption));
 app.use(helmet());
 app.use(cors());
 
-// app.use('/api/items', itemsRouter)
+app.use('/api/items', itemsRouter)
 app.use('/api/members', membersRouter)
 
 app.get('/', (req, res) => {
