@@ -18,6 +18,12 @@ const MembersService = {
     .where('id', id)
     .first()
   },
+  deleteMember(knex, id) {
+    return knex('team_members').where({ id }).delete()
+  },
+  updateMember(knex, id, newMembersFields) {
+    return knex('team_members').where({ id }).update(newMembersFields)
+  }
 }
 
 module.exports = MembersService

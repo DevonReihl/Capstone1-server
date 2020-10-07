@@ -67,7 +67,37 @@ membersRouter
   res.json(serializeMembers(res.member))
 })
 .delete((req, res, next) => {
-  
+  MembersService.deleteMember(
+    req.app.get('db'),
+    req.params.memberid
+  )
+  .then( ()=> {
+    res.status(204).end()
+  })
+  .catch(next)
+})
+
+.patch(jsonParser, (req, res, next) => {
+  const { gishname, fullname, phone}= req.body
+  const memberToUpdate = {gishname, fullname, phone}
+
+  const numberOfValues = Object.values(memberToUpdate). filter(Boolean).length
+  if (numberOfValues === 0)
+  return res.status(400).json({
+    error: {
+      message: `Request body must contain at least one of the following 'gishname', 'fullname' or 'number'`
+    }
+  })
+
+  MembersService.updateMember(
+    req.app.get('db'),
+    req.params.memberid,
+    memberToUpdate
+  )
+  .then(()=> {
+    res.status(204).end()
+  })
+  .catch(next)
 })
 
 
