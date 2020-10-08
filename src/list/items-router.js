@@ -11,7 +11,7 @@ const serializeItems = item => ({
   itemText: item.itemtext,
   itemType: item.itemtype,
   points: item.pointvalue,
-  memberId: item.memberId
+  memberId: item.memberid
 })
 
 itemsRouter
