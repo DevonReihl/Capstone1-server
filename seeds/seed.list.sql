@@ -6,13 +6,13 @@ VALUES
 Members of Kansas!Livestream Challenge: COLLABORATIVE. (UP TO ONE MINUTE) Carry on and on and on, wayward son! Using 
 the provided backing track, record yourself singing along to Kansas classic anthem Carry On Wayward Son while 
 holding a sign with your team name on it. You should have at least 5 physically-distanced people singing along with 
-you — the more singers, the merrier.', 'video',	22, 2),
+you the more singers, the merrier.', 'video',	22, 2),
 ('Portrait, Anne Geddes style',	'It''s important not to infantilize elderly people, but in THIS case we''ll make an 
 exception. Re-create a portrait of one or more adults over the age of 60 in the style of an Anne Geddes poster.', 'image', 36, 9),
 ('Board game for bugs',	'Bugs get bored, too. Build a tiny board game for bugs and show them playing.', 'image', 23, 7),
 ('Customs Parachute',	'Clear customs using a parachute.', 'image', 170, 4),
 ('Tribute to Grant Imahara',	'(TIMELAPSE) Mythbuster and mechanical engineering genius, Grant Imahara, tragically 
-passed away this year. He was slated to be one of our GISH Guests for this year’s Hunt, and we''re heartbroken by his 
+passed away this year. He was slated to be one of our GISH Guests for this year''s Hunt, and we''re heartbroken by his 
 loss so in tribute to him, projectile-paint a portrait of Grant Imahara using slingshots, a mechanized catapult, or 
 other "projectile" or robotic system. This is the Item we had planned to do with Grant, so do your best to honor his 
 memory.',	'image',	84, 1),
@@ -21,13 +21,13 @@ and pull it! Weave a tapestry of an iconic scene from Supernatural.',	'image',	7
 ('Quarintine Sam/Dean',	'(UP TO 1 MINUTE) The Supernatural final episodes got delayed due to COVID. Show us what Dean, 
 Castiel, and Sam are up to while sheltering in place due to the pandemic.',	'video',	55, 3),
 ('Final Episode (no spoilers)',	'(STOP MOTION - UP TO 1 MINUTE) We''re too impatient to wait for The End of Supernatural.
-(Though nothing ever really ends… does it?) Film a "spoiler-free" trailer for the final episode as you imagine it.',	'video',	39, 4),
+(Though nothing ever really ends. does it?) Film a "spoiler-free" trailer for the final episode as you imagine it.',	'video',	39, 4),
 ('Salt monster',	'In Supernatural, Sam and Dean use salt to fight against the bad guys. Depict a cryptid or monster 
 using only salt. - Ashlynn A',	'image',	28, 6),
 ('Grammy Serenade',	'(UP TO 60 seconds) Every year, I send Gishers to visit my grandmother and the residents of Roland 
 Park Place retirement community in Baltimore, MD, or other retirement communities. But obviously, COVID has put a stop 
 to such drop-in visits. I can''t even send a card! However, she does love serenades. Originally, I was sending people 
-to her balcony to serenade her but for everyone’s safety, she has commanded that we use technology instead, and if 
+to her balcony to serenade her but for everyone''s safety, she has commanded that we use technology instead, and if 
 Gammy commands it, it must be done: First, dress up in the attire of a bygone era from the 1920s-1970s and perform a 
 sweet and sentimental song from the era for my grandmother and other residents of retirement communities. Then, post 
 this video online tagged #SongsForSeniors & #GISH. Submit your original video to us and also send it to the residents 
