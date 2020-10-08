@@ -32,14 +32,14 @@ Gammy commands it, it must be done: First, dress up in the attire of a bygone er
 sweet and sentimental song from the era for my grandmother and other residents of retirement communities. Then, post 
 this video online tagged #SongsForSeniors & #GISH. Submit your original video to us and also send it to the residents 
 of your local nursing home. One caveat: The singer may not send their serenade to their own relative exclusively.',	'video',	55, 5),
-('Washer, Texas Ranger',	'(UP TO 30 SECONDS) Washer, Texas Ranger. "This town ain''t big enough for the both of us… so 
+('Washer, Texas Ranger',	'(UP TO 30 SECONDS) Washer, Texas Ranger. "This town ain''t big enough for the both of us. so 
 we should stay 6 feet apart!" In the style of old Westerns, create a trailer for Jared Padelecki''s new series, 
 prominently featuring his obsession with high-noon, hand-sanitizing duels to take on the baddest villain in town. 
 Bonus points if you get Jared Padalecki to make a cameo appearance.',	'video',	58, 6),
 ('Make a microscopic sub sandwich',	'Submarine sandwiches are delicious, but they can be too filling. Make a tiny sub 
 sandwich so small that you have to use a microscope or magnifying glass to see it.',	'video',	40, 1),
 ('Rewrite a classic epic poem',	'Epic poems are, well, epic. But they''re also way too long. Re-write a classic epic 
-poem such as Beowulf or the Iliad for modern attention spans — as a tweet-thread of no more than 10 tweets. Submit a 
+poem such as Beowulf or the Iliad for modern attention spans - as a tweet-thread of no more than 10 tweets. Submit a 
 screenshot and also a link to your poem.',	'image',	22, 5),
 ('Lip-syncing Trump',	'(UP TO 60 SECONDS) Give Sarah Cooper ( https://www.youtube.com/watch?v=EfhtqeQien0 ) a run for 
 her money lip-syncing Trump or any other politician you think deserves this presidential treatment.',	'video',	17, 2),
@@ -108,7 +108,7 @@ community. During the press junket, we realized that not enough video content on
 about that. Find a video that you think is important, valuable, or entertaining that is not captioned and add closed 
 captions. Submit a screenshot of you captioning the video and a link to the completed work.',	'image',	58, 7),
 ('Musical Jello',	'How does your pet respond to a Musical Jello (Jelly) board? ( https://vimeo.com/38796545 ) (For 
-safety’s sake, don’t let your pet consume the Jello (Jelly), especially if it’s artificially sweetened.)',	'video',	87, 5),
+safety''s sake, don''t let your pet consume the Jello (Jelly), especially if it’s artificially sweetened.)',	'video',	87, 5),
 ('Game Night with Felicia Day and Misha Collins',	'LIVESTREAM. FRIDAY, AUGUST 7, 1:00 PM PT:SPN Game Night with 
 Felicia Day, Misha Collins, Alaina Huffman, Rachel Miner, Sam Smith, Osric Chau, Ruth Connell, Adam Fergus & Hayley 
 Erin! Livestream Challenge: There will be no submission for this Item! Enjoy the show!',	'image',	0, 1),
@@ -130,7 +130,7 @@ vegetable dyes, if you like.)',	'image',	33, 7),
 to deliver food to loved ones at home. To be safe, GISHCORP has patented a food-delivery system called DineSafe™ 
 wherein the chef simply uses a household electric fan (ceiling or otherwise) to serve meals and snacks to family 
 members from a safe distance.',	'video',	36, 8),
-('Hurdy-gurdy Carry on Wayward Son', '(UP TO 30 SECONDS) Carry on Wayward Son, performed on a hurdy-gurdy. (If you’ve 
+('Hurdy-gurdy Carry on Wayward Son', '(UP TO 30 SECONDS) Carry on Wayward Son, performed on a hurdy-gurdy. (If you''ve 
 already submitted a zamphone video, your entry is still valid)',	'video',	62, 2),
 ('American Politics in a Nutshell',	'American politics in a nutshell. Literally. - Brio44',	'image',	34, 7),
 ('Snack Attack',	'Snack attack! This one was a brutal one. Caption "snack attack" on the image.',	'image',	20, 4),
