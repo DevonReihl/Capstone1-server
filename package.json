@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --require test/setup.js",
+    "test": "mocha --require test/setup.js --timeout=5000",
     "dev": "nodemon src/server.js",
     "migrate": "postgrator --config postgrator-config.js",
     "migrate:test": "env NODE_ENV=test npm run migrate",
@@ -23,7 +23,7 @@
     "helmet": "^4.1.1",
     "knex": "^0.21.6",
     "morgan": "^1.10.0",
-    "pg": "^8.4.0",
+    "pg": "^7.18.2",
     "postgrator-cli": "^3.2.0",
     "winston": "^3.3.3",
     "xss": "^1.0.8"
