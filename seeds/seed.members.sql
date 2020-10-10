@@ -1,4 +1,4 @@
-TRUNCATE team_members CASCADE;
+TRUNCATE team_members RESTART IDENTITY CASCADE;
 
 INSERT INTO team_members (gishName, fullName, phone)
 VALUES

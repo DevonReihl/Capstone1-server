@@ -30,11 +30,25 @@ function makeMaliciousItem() {
     itemname: 'Lucifer <script>alert("xss");</script>',
     itemtext: 'Lucifer <script>alert("xss");</script>',
     itemtype: 'Lucifer <script>alert("xss");</script>',
-    pointvalue: 10000000,
+    pointvalue: 1020204830,
   }
+}
+
+function makeReceivedItemsArray() {
+  return makeItemsArray().map( item => 
+   ({
+     id: item.id,
+     itemName: item.itemname,
+     itemText: item.itemtext,
+     itemType: item.itemtype,
+     points: item.pointvalue,
+     memberId: null
+   })
+    )
 }
 
 module.exports = {
   makeItemsArray,
   makeMaliciousItem,
+  makeReceivedItemsArray
 }
