@@ -2,6 +2,7 @@ const { expect } = require('chai')
 const { contentSecurityPolicy } = require('helmet')
 const knex = require('knex')
 const supertest = require('supertest')
+const xss = require('xss')
 const app = require('../src/app')
 const { makeItemsArray, makeMaliciousItem, makeReceivedItemsArray } = require('./items.fixtures')
 

@@ -2,6 +2,7 @@ const { expect } = require('chai')
 const { contentSecurityPolicy } = require('helmet')
 const knex = require('knex')
 const supertest = require('supertest')
+const xss = require('xss')
 const app = require('../src/app')
 const { makeMembersArray, makeMaliciousMember, makeReceivedMembersArray } = require('./members.fixtures')
 
@@ -23,7 +24,7 @@ describe('Item Endpoints', function() {
 
   afterEach('clean the table', () => db.raw('TRUNCATE team_members RESTART IDENTITY CASCADE'))
 
-  describe(`GET /api/members`, () => {
+  describe.only(`GET /api/members`, () => {
     context(`Given no members`, () => {
       it(`responds with 200 and an empty list`, () => {
         return supertest(app)

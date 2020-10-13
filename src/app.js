@@ -23,7 +23,7 @@ app.use('/api/items', itemsRouter)
 app.use('/api/members', membersRouter)
 
 app.get('/', (req, res) => {
-  res.send('Hello, beautiful!');
+  res.send('Hello, GISH!');
 });
 
 app.use(errorHandler);
