@@ -1,11 +1,9 @@
-# Capstone server
+# Gish Literacy Bandits API server
 
-## Scripts
+https://vast-tor-87302.herokuapp.com/
 
-Start nodemon for the application `npm run dev`
+This server has endpoints for items and members using all CRUD functions. It serves the client at:
+https://vercel.com/devonreihl/gish-client/n7e4qfxev. 
 
-Run the tests `npm test`
-
-## Deploying
-
-When your new project is ready for deployment, add a new Heroku application with `heroku create`. This will make a new git remote called "heroku" and you can then `npm run deploy` which will push to this remote's master branch.
+please see the repo for the client for more information about what the app does. 
+https://github.com/DevonReihl/Capstone1-client
