@@ -5,6 +5,6 @@ CREATE TABLE hunt_items (
   itemName TEXT NOT NULL,
   itemText TEXT NOT NULL,
   itemType TEXT NOT NULL,
-  pointValue INTEGER NOT NULL
+  points INTEGER NOT NULL
 );
 

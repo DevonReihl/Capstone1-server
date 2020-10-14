@@ -1,6 +1,6 @@
 TRUNCATE hunt_items RESTART IDENTITY CASCADE;
 
-INSERT INTO hunt_items (itemName, itemText, itemType, pointValue, memberId)
+INSERT INTO hunt_items (itemName, itemText, itemType, points, memberId)
 VALUES
 ('campfire Sing-A-long',	'LIVESTREAM. TUESDAY, AUGUST 4, 5:00 PM PT: Campfire Sing-A-Long with Misha Collins & 
 Members of Kansas!Livestream Challenge: COLLABORATIVE. (UP TO ONE MINUTE) Carry on and on and on, wayward son! Using 
