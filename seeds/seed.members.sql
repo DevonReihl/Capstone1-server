@@ -1,6 +1,6 @@
 TRUNCATE team_members RESTART IDENTITY CASCADE;
 
-INSERT INTO team_members (gishName, fullName, phone)
+INSERT INTO team_members (gish_name, full_name, phone)
 VALUES
 ('DawnJoe', 'Dawn Josephson', '503-546-1928'),
 ('Heathernicolern', 'Heather Fleischer', '503-452-7781'),

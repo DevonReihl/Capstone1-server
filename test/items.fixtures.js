@@ -2,24 +2,27 @@ function makeItemsArray() {
   return [
     {
       id: 1,
-      itemname: 'Sillyness',
-      itemtext: 'Words of sillyness that better the world',
-      itemtype: 'image',
-      pointvalue: 100,
+      item_name: 'Sillyness',
+      item_text: 'Words of sillyness that better the world',
+      item_type: 'image',
+      points: 10,
+      member_id: null
     },
     {
       id: 2,
-      itemname: 'More sillyness',
-      itemtext: 'Words of sillyness that better the world',
-      itemtype: 'image',
-      pointvalue: 100,
+      item_name: 'More sillyness',
+      item_text: 'Words of sillyness that better the world',
+      item_type: 'image',
+      points: 100,
+      member_id: null
     },
     {
       id: 3,
-      itemname: 'weirdness',
-      itemtext: 'Nothing but sillyness sillyness that better the world',
-      itemtype: 'image',
-      pointvalue: 100,
+      item_name: 'weirdness',
+      item_text: 'Nothing but sillyness sillyness that better the world',
+      item_type: 'image',
+      points: 110,
+      member_id: null
     },
   ]
 }
@@ -27,28 +30,29 @@ function makeItemsArray() {
 function makeMaliciousItem() {
   const maliciousItem = {
     id: 911,
-    itemname: 'Lucifer <script>alert("xss");</script>',
-    itemtext: 'Lucifer <script>alert("xss");</script>',
-    itemtype: 'Lucifer <script>alert("xss");</script>',
-    pointvalue: 1020204830,
+    item_name: 'Lucifer <script>alert("xss");</script>',
+    item_text: 'Lucifer <script>alert("xss");</script>',
+    item_type: 'Lucifer <script>alert("xss");</script>',
+    points: 1020204830,
+    member_id: null
   }
 }
 
-function makeReceivedItemsArray() {
-  return makeItemsArray().map( item => 
-   ({
-     id: item.id,
-     itemName: item.itemname,
-     itemText: item.itemtext,
-     itemType: item.itemtype,
-     points: item.pointvalue,
-     memberId: null
-   })
-    )
-}
+// function makeReceivedItemsArray() {
+//   return makeItemsArray().map( item => 
+//    ({
+//      id: item.id,
+//      item_name: item.item_name,
+//      item_text: item.item_text,
+//      item_type: item.item_type,
+//      points: item.points,
+//      member_id: null
+//    })
+//     )
+// }
 
 module.exports = {
   makeItemsArray,
   makeMaliciousItem,
-  makeReceivedItemsArray
+  // makeReceivedItemsArray
 }
