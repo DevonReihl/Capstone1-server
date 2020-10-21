@@ -38,21 +38,8 @@ function makeMaliciousItem() {
   }
 }
 
-// function makeReceivedItemsArray() {
-//   return makeItemsArray().map( item => 
-//    ({
-//      id: item.id,
-//      item_name: item.item_name,
-//      item_text: item.item_text,
-//      item_type: item.item_type,
-//      points: item.points,
-//      member_id: null
-//    })
-//     )
-// }
 
 module.exports = {
   makeItemsArray,
   makeMaliciousItem,
-  // makeReceivedItemsArray
 }

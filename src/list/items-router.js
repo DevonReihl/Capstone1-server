@@ -7,11 +7,11 @@ const jsonParser = express.json()
 
 const serializeItems = item => ({
   id: item.id,
-  itemName: item.itemname,
-  itemText: item.itemtext,
-  itemType: item.itemtype,
+  item_name: item.item_name,
+  item_text: item.item_text,
+  item_type: item.item_type,
   points: item.points,
-  memberId: item.memberid
+  member_id: item.member_id
 })
 
 itemsRouter
@@ -26,8 +26,8 @@ itemsRouter
   .catch(next)
 })
 .post(jsonParser, (req, res, next) => {
-  const {itemname, itemtext, itemtype, points, memberid}=req.body
-  const newItem = {itemname, itemtext, itemtype, points, memberid}
+  const {item_name, item_text, item_type, points, member_id}=req.body
+  const newItem = {item_name, item_text, item_type, points, member_id}
 
   for (const [key, value] of Object.entries(newItem)) {
     if (value == null) {
@@ -80,8 +80,8 @@ itemsRouter
 })
 
 .patch(jsonParser, (req, res, next) => {
-  const {itemname, itemtext, itemtype, points, memberid}=req.body
-  const itemToUpdate = {itemname, itemtext, itemtype, points, memberid}
+  const {item_name, item_text, item_type, points, member_id}=req.body
+  const itemToUpdate = {item_name, item_text, item_type, points, member_id}
 
   const numberOfValues = Object.values(itemToUpdate).filter(Boolean).length
   if (numberOfValues === 0)

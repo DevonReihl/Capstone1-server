@@ -7,8 +7,8 @@ const jsonParser = express.json()
 
 const serializeMembers = member => ({
   id: member.id,
-  gishname: member.gishname,
-  fullname: member.fullname,
+  gish_name: member.gish_name,
+  full_name: member.full_name,
   phone: member.phone,
 
 })
@@ -25,10 +25,10 @@ membersRouter
   .catch(next)
 })
 .post(jsonParser, (req, res, next) => {
-  const {gishname, fullname, phone} = req.body
-  const newMember = { gishname, fullname, phone}
+  const {gish_name, full_name, phone} = req.body
+  const newMember = { gish_name, full_name, phone}
 
-  if (!gishname || !fullname) {
+  if (!gish_name || !full_name) {
     return res.status(400).json({
       error: {message:`Missing either gishName or fullName in resquest body`}
     })
@@ -78,14 +78,14 @@ membersRouter
 })
 
 .patch(jsonParser, (req, res, next) => {
-  const { gishname, fullname, phone}= req.body
-  const memberToUpdate = {gishname, fullname, phone}
+  const { gish_name, full_name, phone}= req.body
+  const memberToUpdate = {gish_name, full_name, phone}
 
   const numberOfValues = Object.values(memberToUpdate). filter(Boolean).length
   if (numberOfValues === 0)
   return res.status(400).json({
     error: {
-      message: `Request body must contain at least one of the following 'gishname', 'fullname' or 'number'`
+      message: `Request body must contain at least one of the following 'gish_name', 'full_name' or 'number'`
     }
   })
 

@@ -2,14 +2,14 @@ function makeMembersArray() {
   return [
     {
       id: 1,
-      gishname: 'fuzzyBunny',
-      fullname: 'David Michele',
+      gish_name: 'fuzzyBunny',
+      full_name: 'David Michele',
       phone: '555-555-5555',
     },
     {
       id: 2,
-      gishname: 'fuzzyRabbit',
-      fullname: 'John David',
+      gish_name: 'fuzzyRabbit',
+      full_name: 'John David',
       phone: '555-555-4444',
     },
   ]
@@ -18,8 +18,8 @@ function makeMembersArray() {
 function makeMaliciousMember() {
   const maliciousMember = {
     id: 911,
-    gishname: 'Lucifer <script>alert("xss");</script>',
-    fullname: 'Lucifer <script>alert("xss");</script>',
+    gish_name: 'Lucifer <script>alert("xss");</script>',
+    full_name: 'Lucifer <script>alert("xss");</script>',
     phone: '555-555-4444',
   }
 }
@@ -28,8 +28,8 @@ function makeReceivedMembersArray() {
   return makeMembersArray().map(member =>
     ({
       id: member.id,
-      gishName: member.gishname,
-      fullName: member.fullname,
+      gishName: member.gish_name,
+      fullName: member.full_name,
       phone: member.phone
     }))
 }
