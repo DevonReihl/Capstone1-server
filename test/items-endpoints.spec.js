@@ -1,13 +1,9 @@
-// const { expect } = require('chai')
-// const { contentSecurityPolicy } = require('helmet')
-// const { contentSecurityPolicy } = require('helmet')
 const { expect } = require('chai')
 const knex = require('knex')
 const supertest = require('supertest')
 // const xss = require('xss')
 const app = require('../src/app')
 const { makeItemsArray, makeMaliciousItem, makeReceivedItemsArray } = require('./items.fixtures')
-const { makeMembersArray } = require('./members.fixtures')
 
 describe.only('Item Endpoints', () => {
   let db
@@ -108,7 +104,7 @@ describe.only('Item Endpoints', () => {
       })
     })
 
-    it(`Creates an item, responds with 201 and the new item`, async () => {
+    it(`Creates an item, responds with 201 and the new item`, () => {
       const newItem = {
         item_name: 'Test Name',
         item_text: 'Test text',
@@ -116,7 +112,7 @@ describe.only('Item Endpoints', () => {
         points: 200,
         member_id: null,
       }
-    const res_1 = await supertest(app)
+      return supertest(app)
         .post('/api/items')
         .send(newItem)
         .expect(201)
@@ -129,9 +125,11 @@ describe.only('Item Endpoints', () => {
           expect(res.body).to.have.property('id')
           expect(res.headers.location).to.eql(`/api/items/${res.body.id}`)
         })
-      return await supertest(app)
-        .get(`/api/items/${res_1.body.id}`)
-        .expect(res_1.body)
+        .then(res => 
+          supertest(app)
+          .get(`/api/items/${res.body.id}`)
+          .expect(res.body)
+          ) 
     })
   })
 
