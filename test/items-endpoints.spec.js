@@ -4,8 +4,9 @@ const supertest = require('supertest')
 // const xss = require('xss')
 const app = require('../src/app')
 const { makeItemsArray, makeMaliciousItem, makeReceivedItemsArray } = require('./items.fixtures')
+const { makeMembersArray } = require('./members.fixtures')
 
-describe.only('Item Endpoints', () => {
+describe('Item Endpoints', () => {
   let db
 
   before('make knex instance', () => {
@@ -70,6 +71,7 @@ describe.only('Item Endpoints', () => {
         .insert(testItems)
       })
 
+
       it('responds with 200 and the specified item', () => {
         const itemId = 2
         const expectedItem = testItems[itemId - 1]
@@ -103,34 +105,125 @@ describe.only('Item Endpoints', () => {
         })
       })
     })
+    context('create members to post item', () => {
+      const testMembers = makeMembersArray()
 
-    it(`Creates an item, responds with 201 and the new item`, () => {
-      const newItem = {
-        item_name: 'Test Name',
-        item_text: 'Test text',
-        item_type: 'image',
-        points: 200,
-        member_id: null,
-      }
-      return supertest(app)
-        .post('/api/items')
-        .send(newItem)
-        .expect(201)
-        .expect(res => {
-          expect(res.body.item_name).to.eql(newItem.item_name)
-          expect(res.body.item_text).to.eql(newItem.item_text)
-          expect(res.body.item_type).to.eql(newItem.item_type)
-          expect(res.body.points).to.eql(newItem.points)
-          expect(res.body.member_id).to.eql(newItem.member_id)
-          expect(res.body).to.have.property('id')
-          expect(res.headers.location).to.eql(`/api/items/${res.body.id}`)
-        })
-        .then(res => 
-          supertest(app)
-          .get(`/api/items/${res.body.id}`)
-          .expect(res.body)
-          ) 
+      beforeEach('members', () => {
+        return db
+        .into('team_members')
+        .insert(testMembers)
+      })
+
+      afterEach('clean the table', () => db.raw('TRUNCATE team_members RESTART IDENTITY CASCADE'))
+
+      it(`Creates an item, responds with 201 and the new item`, () => {
+        const newItem = {
+          item_name: 'Test Name',
+          item_text: 'Test text',
+          item_type: 'image',
+          points: 200,
+          member_id: 1,
+        }
+        return supertest(app)
+          .post('/api/items')
+          .send(newItem)
+          .expect(201)
+          .expect(res => {
+            expect(res.body.item_name).to.eql(newItem.item_name)
+            expect(res.body.item_text).to.eql(newItem.item_text)
+            expect(res.body.item_type).to.eql(newItem.item_type)
+            expect(res.body.points).to.eql(newItem.points)
+            expect(res.body.member_id).to.eql(newItem.member_id)
+            expect(res.body).to.have.property('id')
+            expect(res.headers.location).to.eql(`/api/items/${res.body.id}`)
+          })
+          .then(res => 
+            supertest(app)
+            .get(`/api/items/${res.body.id}`)
+            .expect(res.body)
+            ) 
+      })
+    })
+
+    
+  })
+
+  describe(`PATCH /api/items/:itemsid`, () => {
+    context('Given no items', () => {
+      it('resonds with 404', () => {
+        const itemId = 1029345
+        return supertest(app)
+        .patch(`/api/items/${itemId}`)
+        .expect(404, { error: {message: `Item does not exist`}})
+      })
+    })
+    context('Given there are items in the database', () => {
+      const testItems = makeItemsArray()
+      const testMembers = makeMembersArray()
+
+      beforeEach('members', () => {
+        return db
+        .into('team_members')
+        .insert(testMembers)
+      })
+
+      afterEach('clean the table', () => db.raw('TRUNCATE team_members RESTART IDENTITY CASCADE'))
+
+
+      beforeEach('insert items', () => {
+        return db
+        .into('hunt_items')
+        .insert(testItems)
+      })
+      it('responds with 204 and updates the item', () => {
+        const idToUpdate = 2
+        const updateItem = {
+          item_name: 'Enjoy the hunt',
+          item_text: 'blah blah blah',
+          item_type: 'image',
+          points: 0,
+          member_id: 1,
+        }
+        return supertest(app)
+        .patch(`/api/items/${idToUpdate}`)
+        .send(updateItem)
+        .expect(204)
+      })
     })
   })
 
+  describe('DELETE /api/items/:itemsid', () => {
+    context(`Given no items`, () => {
+      it(`responds 404 the item doesn't exist`, () => {
+        return supertest(app)
+        .delete(`/api/items/123`)
+        .expect(404, {
+          error: { message: `Item does not exist`}
+        })
+      })
+    })
+
+    context('Given there are items in the database', () => {
+      const testItems = makeItemsArray()
+
+      beforeEach('insertitem', () => {
+        return db
+        .into('hunt_items')
+        .insert(testItems)
+      })
+
+      it('removes the item by ID', () => {
+        const idToRemove = 2
+        const expectedItems = testItems.filter(itm => itm.id !== idToRemove)
+        return supertest(app)
+        .delete(`/api/items/${idToRemove}`)
+        .expect(204)
+        .then(() => 
+          supertest(app)
+            .get(`/api/items`)
+            .expect(expectedItems)
+        )
+      })
+    })
+  })
 })

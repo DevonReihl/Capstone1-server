@@ -30,7 +30,7 @@ membersRouter
 
   if (!gish_name || !full_name) {
     return res.status(400).json({
-      error: {message:`Missing either gishName or fullName in resquest body`}
+      error: {message:`Missing either gish_name or full_name in request body`}
     })
   }
 
