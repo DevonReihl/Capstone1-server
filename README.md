@@ -14,7 +14,7 @@ API Overview
 │       └── /
 |   └── PATCH /:id
 |   └── DELETE /:id
-│   ![member view](https://i.imgur.com/R0f6NNt.png) 
+│
 
 
 ├── /items
