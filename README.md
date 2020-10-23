@@ -16,7 +16,7 @@ API Overview
 |   └── DELETE /:id
 │
 
-![hunt view](https://i.imgur.com/q0rfGY6.png)   ![member hunt view](https://i.imgur.com/p6mT4yI.png)
+![hunt view](https://i.imgur.com/q0rfGY6.png)   ![member hunt view](https://i.imgur.com/C74DZo4.png)
 
 
 ├── /items
