@@ -4,7 +4,25 @@ https://vast-tor-87302.herokuapp.com/
 
 This is a full API server for my GISH team. It is Restful designed
 
-This server has endpoints for items and members using all CRUD functions. 
+API Overview
+/api
+.
+├── /members           ![member view](https://i.imgur.com/R0f6NNt.png) 
+│   └── GET
+│   └── GET /:id
+│   └── POST
+│       └── /
+|   └── PATCH /:id
+|   └── DELETE /:id
+│       
+├── /items             ![hunt view](https://i.imgur.com/q0rfGY6.png)
+│   └── GET
+│   └── GET /:id
+│   └── POST
+│       └── /
+|   └── PATCH /:id
+|   └── DELETE /:id
+│       
 
 Technology
   Back End
