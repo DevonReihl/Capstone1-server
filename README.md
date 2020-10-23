@@ -24,7 +24,7 @@ API Overview
 │       └── /
 |   └── PATCH /:id
 |   └── DELETE /:id
-│   ![hunt view](https://i.imgur.com/q0rfGY6.png)    
+│  
 
 Technology
   Back End
