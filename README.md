@@ -2,9 +2,22 @@
 
 https://vast-tor-87302.herokuapp.com/
 
-This is a full API server for my GISH team. It uses Node.js as well as Postgresql. It is Restful designed and deployed to Heroku (link above)
+This is a full API server for my GISH team. It is Restful designed
 
 This server has endpoints for items and members using all CRUD functions. 
+
+Technology
+  Back End
+    Node and Express
+    RESTful Api
+Testing
+  Supertest (integration)
+  Mocha and Chai (unit)
+Database
+  Postgres
+  Knex.js - SQL wrapper
+Production
+  Deployed via Heroku (link above)
 
 
 It serves the client at:
