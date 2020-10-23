@@ -7,22 +7,24 @@ This is a full API server for my GISH team. It is Restful designed
 API Overview
 /api
 .
-├── /members           ![member view](https://i.imgur.com/R0f6NNt.png) 
+├── /members           
 │   └── GET
 │   └── GET /:id
 │   └── POST
 │       └── /
 |   └── PATCH /:id
 |   └── DELETE /:id
-│       
-├── /items             ![hunt view](https://i.imgur.com/q0rfGY6.png)
+│   ![member view](https://i.imgur.com/R0f6NNt.png) 
+
+
+├── /items
 │   └── GET
 │   └── GET /:id
 │   └── POST
 │       └── /
 |   └── PATCH /:id
 |   └── DELETE /:id
-│       
+│   ![hunt view](https://i.imgur.com/q0rfGY6.png)    
 
 Technology
   Back End
