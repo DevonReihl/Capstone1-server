@@ -16,7 +16,7 @@ API Overview
 |   └── DELETE /:id
 │
 
-![hunt view](https://i.imgur.com/q0rfGY6.png)
+![hunt view](https://i.imgur.com/q0rfGY6.png)   ![member hunt view](https://i.imgur.com/p6mT4yI.png)
 
 
 ├── /items
@@ -28,7 +28,7 @@ API Overview
 |   └── DELETE /:id
 │  
 
-   ![member view](https://i.imgur.com/R0f6NNt.png) 
+   ![member view](https://i.imgur.com/R0f6NNt.png)   ![memberInfo view](https://i.imgur.com/p6mT4yI.png)
 
 Technology
   Back End
